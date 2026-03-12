@@ -1,0 +1,14 @@
+---
+title: "AI Workshop Series"
+format:
+  revealjs:
+    theme: [default, theme/ncsu.scss]
+---
+
+## Welcome to the course materials for *AI Workshop Series*
+
+- Colab and Chill: A Vibe Coding Approach to Exploratory Data Analysis using AI
+
+## Slide decks
+
+- [Colab and Chill](colab-and-chill/)

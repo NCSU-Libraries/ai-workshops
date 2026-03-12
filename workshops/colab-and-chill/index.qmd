@@ -1,0 +1,96 @@
+---
+title: "AI Workshop Series"
+subtitle: "Colab and Chill"
+author: "NC State University Libraries"
+date: today
+format:
+  revealjs:
+    theme: [default, ../../config/slides/theme/ncsu.scss]
+    incremental: false
+    preview-links: auto
+    chalkboard: true
+    slide-number: true
+---
+
+## Welcome
+
+Slides and materials live in this repository and the paired Colab notebook.
+
+- Open the learner notebook in Colab
+- Make your own copy before editing
+- Follow along and experiment as we go
+
+---
+
+## Who is this workshop for?
+
+- Learners who are new to Google Colab
+- People who want a practical introduction to AI-assisted analysis workflows
+- Anyone curious about how to prompt, inspect, and refine outputs rather than treating AI as magic
+
+---
+
+## What we will do
+
+- Get comfortable with the Colab environment
+- Practice writing clearer prompts
+- Use AI to help inspect a small dataset
+- Review results critically instead of accepting the first answer
+
+---
+
+## Core idea
+
+AI can accelerate exploration, but it does not replace judgment.
+
+Good workflow:
+
+1. Start with a clear task
+2. Ask for something inspectable
+3. Check the result
+4. Revise the prompt or code
+
+---
+
+## Colab workflow
+
+1. Open the notebook
+2. Copy it to Drive
+3. Run cells top to bottom
+4. Pause at each exercise before looking at the solution
+
+---
+
+## Prompting reminders
+
+- Give the model context
+- Ask for a specific output format
+- Keep prompts small enough to verify
+- Request explanations when you want to learn, not just copy
+
+---
+
+## Healthy skepticism
+
+- Does the answer match the data you see?
+- Are any assumptions unstated?
+- Could you verify it with code?
+- What would you change in the next prompt?
+
+---
+
+### Tell us how we did
+
+[go.ncsu.edu/dss-workshop-eval](https://go.ncsu.edu/dss-workshop-eval)
+
+<p class="thank-you-inline">THANK YOU</p>
+
+::::::: {.hidden}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const title = document.querySelector('.reveal .slides section .title, .reveal .slides section h1, .reveal .slides section h2');
+    const workshop = title ? title.textContent.trim() : 'Workshop';
+    document.body.setAttribute('data-workshop', workshop);
+  });
+</script>
+::::::::

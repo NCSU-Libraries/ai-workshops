@@ -13,60 +13,78 @@
 
 </div>
 
-## AI Workshop Series
+## Colab and Chill: A Vibe Coding Approach to Exploratory Data Analysis using AI
 
-### Colab and Chill <a href="https://colab.research.google.com/github/NCSU-Libraries/ai-workshops/blob/main/workshops/colab-and-chill/colab-and-chill.ipynb"><img alt="Open in Colab - Colab and Chill" src="https://colab.research.google.com/assets/colab-badge.svg"></a></p>
+### Student Template
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NCSU-Libraries/ai-workshops/blob/main/workshops/colab-and-chill/colab-and-chill.ipynb)
 
-These materials are used in NC State University Libraries' Data Science Services workshops covering practical AI workflows in Google Colab.
+**`workshops/colab-and-chill/colab-and-chill.ipynb`** - Interactive workshop notebook with:
+- guided activities
+- accessible notebook structure
+- prompt-writing practice
+- hands-on Google Colab workflow
 
-[Register for the workshop](https://www.lib.ncsu.edu/workshops/colab-and-chill-vibe-coding-approach-exploratory-data-analysis-using-ai/2026-03-12)
+### Solutions Notebook
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NCSU-Libraries/ai-workshops/blob/main/workshops/colab-and-chill/colab-and-chill-solutions.ipynb)
 
----
+**`workshops/colab-and-chill/colab-and-chill-solutions.ipynb`** - Reference notebook with:
+- completed examples
+- worked-through prompts and outputs
+- full solution cells
 
-## Quick start
+## Overview
 
-1. Click the workshop badge above to open in Colab.
-2. If you want to save your work, use "Copy to Drive".
-3. Run cells top-to-bottom.
-4. Use the solutions notebook after attempting the learner notebook.
+Join us for a relaxed, hands-on session where we bring the "vibe coding" philosophy to data science.
 
-## Included notebooks
+In *Colab and Chill*, we ditch the stress of perfect syntax and focus on the high-level "vibe" of your analysis using Google Colab's built-in AI tools. Whether you are a coding novice or a seasoned researcher, this workshop will guide you through the rapidly evolving AI landscape, helping you distinguish between tools that "know" and tools that "do".
 
-- Colab and Chill - Emergency Room Wait Time Data Analysis content in the `workshops/colab-and-chill/` path.
+You will learn to use the PARTS framework to support exploratory data analysis, generate inspectable code, and refine your workflow through iteration. This workshop incorporates hands-on work, and there will be plenty of time for questions. No software installation is needed.
 
-## Learning objectives
+## Learning Objectives
 
-- Navigate the AI landscape by distinguishing between "Knower" tools and "Doer" tools for different stages of analysis.
-- Apply the PARTS framework: Persona, Aim, Recipients, Theme, Structure.
-- Use Google Colab AI workflows to support exploratory analysis through inspectable code and iterative prompting.
-- Reduce hallucination risk by asking AI to generate code you can review and rerun.
+By the end of this workshop, participants will be able to:
 
-## Solutions
+- **Navigate the AI landscape:** Differentiate between "Knower" tools and "Doer" tools to choose the right AI assistant for each stage of work.
+- **Engineer effective prompts:** Apply the **PARTS** framework: Persona, Aim, Recipients, Theme, Structure.
+- **Perform AI-assisted EDA:** Use Google Colab's integrated AI features to explore data through code generation, summaries, and visualizations.
+- **Mitigate hallucinations:** Ask AI to write code rather than perform unsupported reasoning so results are more reproducible and verifiable.
 
-- Colab and Chill - Solutions
-  <a href="https://colab.research.google.com/github/NCSU-Libraries/ai-workshops/blob/main/workshops/colab-and-chill/colab-and-chill-solutions.ipynb"><img alt="Open in Colab - Solutions: Colab and Chill" src="https://colab.research.google.com/assets/colab-badge.svg"></a>
+## Quick Start
 
-## Use on Google Colab
+### Option 1: Open in Google Colab
+Click one of the "Open in Colab" badges above to run the workshop directly in your browser.
 
-This repository is designed to run directly in Google Colab. No software installation is needed for the workshop itself.
+### Option 2: Run locally
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/NCSU-Libraries/ai-workshops.git
+   cd ai-workshops
+   ```
+2. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Launch Jupyter:
+   ```bash
+   jupyter notebook workshops/colab-and-chill/colab-and-chill.ipynb
+   ```
 
-### Open in Colab
+## Workshop Details
 
-1. Click a badge above to open directly in Colab.
-2. Prefer to run locally? See the [LOCAL.md](LOCAL.md) guide.
+- **Workshop folder:** [`workshops/colab-and-chill/`](workshops/colab-and-chill/)
+- **Learner notebook:** [`workshops/colab-and-chill/colab-and-chill.ipynb`](workshops/colab-and-chill/colab-and-chill.ipynb)
+- **Solutions notebook:** [`workshops/colab-and-chill/colab-and-chill-solutions.ipynb`](workshops/colab-and-chill/colab-and-chill-solutions.ipynb)
+- **Slide deck source:** [`workshops/colab-and-chill/index.qmd`](workshops/colab-and-chill/index.qmd)
 
-Alternatively, in Colab: File -> Open Notebook -> GitHub tab -> paste the repo URL `https://github.com/NCSU-Libraries/ai-workshops`.
+## Using Colab
 
-### Run the notebooks
+- Open the notebook in Colab and use "Copy to Drive" if you want to save changes.
+- Run cells from top to bottom.
+- Follow the prompts and exercises in order.
+- Use the solutions notebook after attempting the learner notebook yourself.
 
-After the notebook opens:
-
-1. Review the workshop goals and setup notes.
-2. Run the cells in order.
-3. Duplicate the notebook to your Drive if you want to keep changes.
-
-### Troubleshooting
+## Troubleshooting
 
 - If a notebook opens read-only, use "Copy to Drive" before editing.
 - If a browser extension blocks some Colab UI, try a private or incognito window.
-- If a workshop analysis cell fails because a dataset file is missing, place the required files under `workshops/colab-and-chill/data/`.
+- Prefer a local environment? See [`LOCAL.md`](LOCAL.md).

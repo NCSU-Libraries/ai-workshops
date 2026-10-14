@@ -31,17 +31,17 @@ People frame the question with PARTS, check every number against code and own th
 |---|---|---|---|---|
 | 10:00 | Welcome and setup (8 min) | Share the link; read the one rule | Open the notebook, save a copy, open Gemini | "Every number today comes from code you ran." |
 | 10:08 | Knowers vs. doers (10 min) | NotebookLM demo with the 8 papers | Watch, or try it | "Knowers read and cite; doers compute." |
-| 10:18 | PARTS (7 min) | Typical prompt vs. PARTS prompt | Read along in the notebook | "Vague prompt, confident answer." |
-| 10:25 | Load and 🔎 Trust Check (12 min) | Run the load together; demo the loop once | Prompt, run, compare | "Don't analyze what you haven't checked." |
+| 10:18 | PARTS (7 min) | Short prompts today; PARTS when they fall short | Read along in the notebook | "Vague prompt, confident answer." |
+| 10:25 | Get the data and 🔎 Trust Check (12 min) | Demo the loop once with the first cell's prompt | Copy each cell's prompt, run, compare | "Don't analyze what you haven't checked." |
 | 10:37 | 3.1 Satisfaction (8 min) | Point at the bar labels | Prompt, compare | "Look at the chart, not just the code." |
 | 10:45 | 🕐 The Label vs. the Clock (10 min) | The reveal | Prompt, compare | "Two columns say when; only one is the clock." |
-| 10:55 | 💬 What Drives Wait Times? (12 min) | Confounding | PARTS prompt, compare | "Is that a cause, or does it ride along with urgency?" |
+| 10:55 | 💬 What Drives Wait Times? (12 min) | Confounding; the PARTS level-up | Cell prompts, then the PARTS version | "Is that a cause, or does it ride along with urgency?" |
 | 11:07 | 🧪 Check the Documentation (10 min) | Ask without code first, then with code | Prompt, compare | "Ask for code, not answers." |
 | 11:17 | ✍️ Takeaways and wrap-up (8 min) | 60-second close; evaluation link | Write 3 takeaways | "The numbers are computed; the meaning is yours." |
 | 11:25 | Questions (5 min) | | | |
 
 **Running behind?** Do 3.1 as a quick instructor demo. Show the NotebookLM answer you ran before class instead
-of running it live. In the documentation check, do claims 2 and 3 only. Don't cut the label-vs-clock reveal.
+of running it live. In the documentation check, do the urban-vs.-rural question only. Don't cut the label-vs-clock reveal.
 
 ## Step by Step
 
@@ -83,18 +83,18 @@ of running it live. In the documentation check, do claims 2 and 3 only. Don't cu
 ### 10:18 PARTS (7 min)
 
 1. Walk through the PARTS table in the notebook (Persona, Aim, Recipients, Theme, Structure).
-2. Contrast the typical prompt, "Here's our ER data. When are wait times worst, and what staffing changes
-   should we make? Make some charts.", with the PARTS prompt in **💬 What Drives Wait Times?** (section 3.4).
+2. Say that the cell prompts are short and casual on purpose: that's vibe coding. PARTS is the level-up when
+   a short prompt gets something vague. Show the PARTS version in **💬 What Drives Wait Times?** (section 3.4).
 3. Ask: "Which parts stop Gemini from guessing?" Draw out *Theme* (compute every number with code; keep all
    four urgency levels) and *Structure* (exact tables, one chart, bullets that cite numbers).
 
-### 10:25 Load and Trust Check (12 min)
+### 10:25 Get the Data and Trust Check (12 min)
 
-1. Run the three load cells together. Check: 5,000 rows, 19 columns.
-2. Paste the 🔎 Trust Check prompt into Gemini on the projector. Read the code aloud before running it, and
-   point out that it doesn't change `df`.
-3. Participants do the same and compare with the checkpoint.
-4. Ask: "Two columns describe when a patient arrived. Which one do you trust?"
+1. Demo the loop once on the projector: copy "Let's get the data from …" from the first code cell into Gemini,
+   read the code aloud and run it. Check: 5,000 rows, 19 columns. Anyone stuck runs the three 🆘 load cells.
+2. Participants copy the three 🔎 Trust Check prompts ("Inspect the data", "Any missing values or duplicates?",
+   "Does Time of Day match the time in Visit Date?") and compare with the checkpoint.
+3. Ask: "Two columns describe when a patient arrived. Which one do you trust?"
 
 **Check:** no missing values or duplicates; four urgency levels (Critical 1,242, High 1,245, Medium 1,291,
 Low 1,222); the label is `Night`, not `Late Night`; Day of Week and the total wait are consistent in every
@@ -102,7 +102,7 @@ row; every Time of Day label appears at all 24 clock hours.
 
 ### 10:37 3.1 Satisfaction (8 min)
 
-1. Participants run the satisfaction prompt.
+1. Participants run the satisfaction cells: counts, a bar chart, then percentages on the bars.
 2. Have them look at the chart: does each percentage sit on its own bar?
 
 **Check:** 1: 1,538 (30.8%), 2: 605 (12.1%), 3: 873 (17.5%), 4: 1,429 (28.6%), 5: 555 (11.1%); mean 2.77,
@@ -110,7 +110,7 @@ median 3, mode 1.
 
 ### 10:45 The Label vs. the Clock (10 min)
 
-1. Participants run the 🕐 prompt in section 3.2.
+1. Participants run the two 🕐 cells in section 3.2: by the label, then by the actual hour.
 2. Land it: grouped by the label, waits run from 52 min (Early Morning) to 100 min (Evening). Grouped by the
    actual arrival hour, they're flat: 73-90 min in every hour. The label and the clock are independent
    (chi-square p ≈ 0.7).
@@ -122,7 +122,7 @@ median 3, mode 1.
 
 ### 10:55 What Drives Wait Times? (12 min)
 
-1. Participants paste the PARTS prompt in section 3.4.
+1. Participants run the three cell prompts in section 3.4, then try the PARTS level-up and compare.
 2. **Check:** Critical 18.4, High 43.2, Medium 93.7, Low 173.5 min; by nurse ratio 1-5: 16.1, 20.7, 63.7,
    107.3, 172.1 min.
 3. Ask: "Would adding nurses cut waits?" Then point at the urgency × ratio table. Each urgency level has only
@@ -133,11 +133,10 @@ median 3, mode 1.
 ### 11:07 Check the Documentation (10 min)
 
 1. First, everyone asks Gemini **without** code whether urban hospitals have shorter waits for critical
-   cases. Ask where its answer came from.
-2. Then they paste the 🧪 prompt, which tests four claims from the overview file with code.
-3. **Check:** Mondays busiest, supported (768 vs. 741 on Tuesday). Winter busiest, **not supported** (Summer
-   1,281 vs. Winter 1,258). Urban shorter critical waits, **not supported** (18.5 vs. 18.1 min). Critical
-   shorter waits and higher satisfaction, supported (18.4 min and 4.38 vs. 173.5 min and 1.10).
+   cases (the first 🧪 cell). Ask where its answer came from.
+2. Then "Check that with code", and the Mondays-and-Winter prompt.
+3. **Check:** urban shorter critical waits, **not supported** (18.5 vs. 18.1 min). Mondays busiest, supported
+   (768 vs. 741 on Tuesday). Winter busiest, **not supported** (Summer 1,281 vs. Winter 1,258).
 
 ### 11:17 Takeaways and Wrap-Up (8 min)
 
